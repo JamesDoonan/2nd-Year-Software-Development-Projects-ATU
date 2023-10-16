@@ -1,0 +1,14 @@
+﻿  Source.c
+C:\Users\James Doonan\Desktop\James Doonan\Procedural Assignement\minesweeper\minesweeper\Source.c(15,5): warning C4013: 'srand' undefined; assuming extern returning int
+C:\Users\James Doonan\Desktop\James Doonan\Procedural Assignement\minesweeper\minesweeper\Source.c(15,11): warning C4013: 'time' undefined; assuming extern returning int
+C:\Users\James Doonan\Desktop\James Doonan\Procedural Assignement\minesweeper\minesweeper\Source.c(35,5): warning C4013: 'memset' undefined; assuming extern returning int
+C:\Users\James Doonan\Desktop\James Doonan\Procedural Assignement\minesweeper\minesweeper\Source.c(40,22): warning C4013: 'rand' undefined; assuming extern returning int
+C:\Users\James Doonan\Desktop\James Doonan\Procedural Assignement\minesweeper\minesweeper\Source.c(91,5): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\James Doonan\Desktop\James Doonan\Procedural Assignement\minesweeper\minesweeper\Source.c(137,21): warning C4013: 'countSurroundingMines' undefined; assuming extern returning int
+C:\Users\James Doonan\Desktop\James Doonan\Procedural Assignement\minesweeper\minesweeper\Source.c(116,12): warning C4101: 'j': unreferenced local variable
+C:\Users\James Doonan\Desktop\James Doonan\Procedural Assignement\minesweeper\minesweeper\Source.c(202,9): warning C4101: 'i': unreferenced local variable
+C:\Users\James Doonan\Desktop\James Doonan\Procedural Assignement\minesweeper\minesweeper\Source.c(271,19): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\James Doonan\Desktop\James Doonan\Procedural Assignement\minesweeper\minesweeper\Source.c(272,21): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\James Doonan\Desktop\James Doonan\Procedural Assignement\minesweeper\minesweeper\Source.c(488,5): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\James Doonan\Desktop\James Doonan\Procedural Assignement\minesweeper\minesweeper\Source.c(514,5): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  minesweeper.vcxproj -> C:\Users\James Doonan\Desktop\James Doonan\Procedural Assignement\minesweeper\x64\Debug\minesweeper.exe
