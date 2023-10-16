@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Mastermind.Home"
+             BackgroundImageSource = "mm.jpg">
+    <ScrollView>
+        <StackLayout HorizontalOptions = "Center" VerticalOptions = "Center">
+            <HorizontalStackLayout HorizontalOptions="Center">
+
+                <!--  Grid for player selecting colours  -->
+                <Grid x:Name="GridColourPicker" HorizontalOptions="Center" VerticalOptions="Center" IsVisible="false">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <BoxView Color="Red" Grid.Row="0" Grid.Column="0" Margin="2" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="15" WidthRequest="15">
+                        <BoxView.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="ColorGuessBoxView_Tapped"/>
+                        </BoxView.GestureRecognizers>
+                    </BoxView>
+                    <BoxView Color="Purple" Grid.Row="1" Grid.Column="0" Margin="2" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="15" WidthRequest="15">
+                        <BoxView.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="ColorGuessBoxView_Tapped"/>
+                        </BoxView.GestureRecognizers>
+                    </BoxView>
+                    <BoxView Color="Yellow" Grid.Row="2" Grid.Column="0" Margin="2" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="15" WidthRequest="15">
+                        <BoxView.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="ColorGuessBoxView_Tapped"/>
+                        </BoxView.GestureRecognizers>
+                    </BoxView>
+                    <BoxView Color="Blue" Grid.Row="3" Grid.Column="0" Margin="2" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="15" WidthRequest="15">
+                        <BoxView.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="ColorGuessBoxView_Tapped"/>
+                        </BoxView.GestureRecognizers>
+                    </BoxView>
+                </Grid>
+
+
+                <!--  Grid for actual game play  -->
+                <Grid x:Name="GridGameTable" RowSpacing="0.5"
+          ColumnSpacing="0" BackgroundColor="Grey" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="300" WidthRequest="120">
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <Image Source="grids.jpeg"  Grid.RowSpan="12" Grid.ColumnSpan="4"  HorizontalOptions="Start" VerticalOptions="Start"  HeightRequest="300" WidthRequest="120" />
+
+                    <Button x:Name="BtnGuess1" CornerRadius="5" BorderWidth="1" BorderColor="Transparent" HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="Transparent" Grid.Row="9" Grid.Column="0" Clicked="Button_Clicked"/>
+                    <Button x:Name="BtnGuess2" CornerRadius="5" BorderWidth="1"  BorderColor="Transparent" HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="Transparent" Grid.Row="9" Grid.Column="1" Clicked="Button_Clicked"/>
+                    <Button x:Name="BtnGuess3" CornerRadius="5" BorderWidth="1" BorderColor="Transparent" HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="Transparent" Grid.Row="9" Grid.Column="2" Clicked="Button_Clicked"/>
+                    <Button x:Name="BtnGuess4" CornerRadius="5" BorderWidth="1" BorderColor="Transparent" HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="Transparent" Grid.Row="9" Grid.Column="3" Clicked="Button_Clicked"/>
+
+                </Grid>
+
+                <!--  Grid for giving player Hints  -->
+                <Grid x:Name="GridGameHintTable" RowSpacing="0.5"
+          ColumnSpacing="0" BackgroundColor="Grey" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="300" WidthRequest="50">
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <BoxView  Color="BlueViolet"  Grid.ColumnSpan="4"   HeightRequest="300" WidthRequest="50" HorizontalOptions ="Start" VerticalOptions="Start"/>
+
+                    <BoxView x:Name="Hint1" Color="Transparent"  Grid.Row="9" Grid.Column="0" HeightRequest="6" WidthRequest="6" CornerRadius="3" HorizontalOptions="Center" VerticalOptions="Center"/>
+                    <BoxView x:Name="Hint2" Color="Transparent"  Grid.Row="9" Grid.Column="1" HeightRequest="6" WidthRequest="6" CornerRadius="3" HorizontalOptions="Center" VerticalOptions="Center"/>
+                    <BoxView x:Name="Hint3" Color="Transparent"  Grid.Row="9" Grid.Column="2" HeightRequest="6" WidthRequest="6" CornerRadius="3" HorizontalOptions="Center" VerticalOptions="Center"/>
+                    <BoxView x:Name="Hint4" Color="Transparent"  Grid.Row="9" Grid.Column="3" HeightRequest="6" WidthRequest="6" CornerRadius="3" HorizontalOptions="Center" VerticalOptions="Center"/>
+
+                </Grid>
+
+
+            </HorizontalStackLayout>
+
+            <Label x:Name="LblFileStuff" Text="" />
+            
+            <!-- Submit Guess Button -->
+            <Button x:Name="BtnSubmit" Text="Submit guess" Margin="2" VerticalOptions="Center"  HorizontalOptions="Center" Clicked="Guess_Clicked" />
+
+            <!--<StackLayout Orientation = "Horizontal">
+            --><!-- Save Button --><!--
+                <Button x:Name="BtnSave" Text="Save" Margin=".5" Grid.Row="11" Grid.Column="7" Grid.ColumnSpan="2" HorizontalOptions="Center" VerticalOptions="Center"/>
+
+            --><!-- Load Button --><!--
+            <Button x:Name="BtnLoadFile" Text="Load previous game" HorizontalOptions="Center" />
+                
+             </StackLayout>-->
+            <!-- Exit Button -->
+            <Button x:Name="ExitMainMenu" Text="Click here for Main Menu" Margin="1" VerticalOptions="Center"  HorizontalOptions="Center" Clicked="Exit_Clicked" />
+
+        </StackLayout>
+
+    </ScrollView>
+
+
+</ContentPage>
